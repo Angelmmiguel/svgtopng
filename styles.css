@@ -1,0 +1,7 @@
+canvas{display:none;}
+body{background:linear-gradient(to left,#f953c6,#b91d73);margin:0;font-family:arial;height:100vh;display:flex;align-items:center;justify-content:center;}
+div{margin-bottom:6px;}
+label{color:#fff;font-size:24px;}
+input,button{border-radius:5px;border:1px solid #ffa2e2;padding:1em;}
+input{margin-right:1em;}
+button{background:#ffbce4;}

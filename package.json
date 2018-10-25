@@ -1,0 +1,18 @@
+{
+  "name": "svgtopng",
+  "version": "1.0.0",
+  "description": "Convert a SVG form an URL into a PNG",
+  "main": "index.js",
+  "repository": "git@github.com:Angelmmiguel/svgtopng.git",
+  "author": "Angel M <angel@laux.es>",
+  "license": "Apache-2.0",
+  "scripts": {
+    "start": "http-server .",
+    "build": "mkdir dist && cp index.html styles.css app.js ./dist",
+    "size": "bundlesize -f '*.{html,js,css}' -s 1kB -c none"
+  },
+  "devDependencies": {
+    "bundlesize": "^0.17.0",
+    "http-server": "^0.11.1"
+  }
+}
