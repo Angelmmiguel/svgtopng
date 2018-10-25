@@ -9,4 +9,5 @@ oc=_=>{
     at('href',u)
     at('target','_blank')
     a.dispatchEvent(e)}
+  i.crossOrigin=`Anonymous`
   i.src=t.value}
