@@ -1,4 +1,24 @@
-<head><link href="/styles.css" rel="stylesheet"/></head>
-<main><div><label for="a">SVG URL</label></div><input id="a"/><button onclick="oc()">Download PNG</button></main>
+<head>
+  <style>
+    canvas{display:none;}
+    body{background:linear-gradient(to left,#f953c6,#b91d73);margin:0;font-family:arial;height:100vh;display:flex;align-items:center;justify-content:center;}
+    div{margin-bottom:6px;}
+    label{color:#fff;font-size:24px;}
+    textarea,button{border-radius:5px;border:1px solid #ffa2e2;padding:1em;}
+    textarea{margin-right:1em;width: 500px;height:100px}
+    button{background:#ffbce4;}
+  </style>
+</head>
+<main><div><label for="a">SVG Code</label></div><div><textarea id="a"></textarea></div><button onclick="oc()">Download PNG</button></main>
 <canvas></canvas>
-<script src="/app.js"></script>
+<script>
+dc=document,$=dc.querySelector.bind(dc),t=$`textarea`,c=$`canvas`,i=new Image(),d=c.getContext`2d`,s=`image`
+oc=_=>{
+  i.onload=_=>{
+    d.drawImage(i,0,0)
+    m=`${s}/png`,u=c.toDataURL(m),a=dc.createElement`a`
+    a.download='i.png'
+    a.href=u
+    a.click()}
+  i.src=`data:${s}/svg+xml;utf8,${t.value}`}
+</script>

@@ -8,8 +8,8 @@
   "license": "Apache-2.0",
   "scripts": {
     "start": "http-server .",
-    "build": "mkdir dist && cp index.html styles.css app.js ./dist",
-    "size": "bundlesize -f '*.{html,js,css}' -s 1kB -c none"
+    "build": "mkdir dist && cp index.html ./dist",
+    "test": "bundlesize -f index.html -s 1kB -c none"
   },
   "devDependencies": {
     "bundlesize": "^0.17.0",
