@@ -4,8 +4,8 @@
     canvas{display:none;}
     body{background:linear-gradient(to left,#f953c6,#b91d73);margin:0;font-family:arial;height:100vh;display:flex;align-items:center;justify-content:center;}
     div{margin-bottom:6px;}
-    label{color:#fff;font-size:24px;}
-    textarea,button{border-radius:5px;border:none;padding:1em;}
+    label{color:#fff;}
+    textarea,button{border-radius:5px;border:0;padding:1em;}
     textarea{width:500px;height:100px;display:block;margin:1em 0;}
     button{background:#ffbce4;}
   </style>
@@ -16,8 +16,8 @@
 dc=document,$=dc.querySelector.bind(dc),t=$`textarea`,c=$`canvas`,i=new Image(),d=c.getContext`2d`,s=`image`
 oc=_=>{
   i.onload=_=>{
-    [_,w,h]=t.value.match(/wBox="\d \d (\d*) (\d*)"/)
-    c.width=w,c.height=h
+    [_,w,h]=t.value.match(/ox="\d \d ([\d\.]*) ([\d\.]*)"/)
+    w*=2,h*=2,c.width=w,c.height=h
     d.drawImage(i,0,0,w,h)
     m=`${s}/png`,u=c.toDataURL(m),a=dc.createElement`a`
     a.download='i.png'
